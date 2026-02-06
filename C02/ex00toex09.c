@@ -217,8 +217,24 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 /*
 ex11
 */
-
+// I won't need to print more than 2 characters in hex, thats why i can hardcode the two operations inside write arg)
 void	ft_putstr_non_printable(char *str)
 {
-	 
+	int				i;
+	char	*hex;
+
+	i = 0;
+	hex = "0123456789abcdef";
+	while(str[i])
+	{
+		if ((str[i] < 32) || str[i] == 127)
+		{
+			write(1, "\\", 1)
+			write(1, &hex[(unsigned char)str[i] / 16], 1);
+			write(1, &hex[(unsigned char)str[i] % 16], 1);
+		}
+		else
+			write(1, &str[i], 1);
+		i++;
+	}
 }
