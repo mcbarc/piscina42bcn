@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -30,36 +31,43 @@ char	*ft_strcat(char *dest, const char *src)
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	int	sep_len;
-	int	i;
-	int	count;
+	int		sep_len;
+	int		i;
+	int		count;
 	char	*temp;
 
 	
 	sep_len = ft_strlen(sep);
 	i = 0;
 	count = 0;
-	while (i < size - 1)
+	if (size == 0)
 	{
-		count += strlen((*strs)[i]);
+		temp = (char *)malloc(1);
+		if (temp)
+			temp[0] = '\0';
+		return temp;
+	}
+	while (i < size)
+	{
+		count += ft_strlen(strs[i]); // there is an address stored at strs[i], just what strlen expects!
 		i++;
 	}
-	temp = (char *)malloc(sizeof(char) * count + ((sep_len + 1) * size));
+	temp = (char *)malloc(sizeof(char) * count + (sep_len * (size - 1) + 1));
 	if (!temp)
-		return = NULL;
-	if (size == 0)
-		return (free(temp));
+		return NULL;
+	temp[0] = '\0';
 	i = 0;
-	while (i < size -1)
+	while (i < size)
 	{
-		ft_strcat(temp, (*strs)[i]);
+		ft_strcat(temp, strs[i]);
+		if (i < size - 1)
+			ft_strcat(temp, sep);
 		i++;
 	}
 	return (temp);
 }
 
 #include <stdio.h>
-#include <stdlib.h>
 
 // Prototype of your function
 char *ft_strjoin(int size, char **strs, char *sep);
