@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
 int	*ft_range(int min, int max)
 {
@@ -35,7 +34,9 @@ int	*ft_range(int min, int max)
 	return (tmp_range);
 }
 
-/*
+#include <unistd.h>
+#include <stdio.h>
+
 int	main(void)
 {
 	int	*range;
@@ -44,17 +45,21 @@ int	main(void)
 	int min;
 	int max;
 	
+	min = -2;
+	max = 8;	
 	size = max - min;
 	range = ft_range(min, max);
 	if (!range)
 		return (1);
 	i = 0;
-	while (range[i] < size - 1)
+	while (i < size)
 	{
-		printf("%d, ", range[i]);
+		printf("%d", range[i]);
+		if (i < size -1)
+			printf(", ");
 		i++;
 	}
+	printf("\n");
 	free(range);
 	return (0);
 }
-*/

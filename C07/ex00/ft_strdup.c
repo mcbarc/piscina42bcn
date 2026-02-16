@@ -38,7 +38,7 @@ char	*ft_strcpy(char *s1, char *s2)
 
 char	*ft_strdup(char *src)
 {
-	int		size;
+	int	size;
 	char	*new_str;
 	
 	size = ft_strlen(src);
