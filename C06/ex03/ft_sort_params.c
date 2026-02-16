@@ -6,7 +6,7 @@
 /*   By: macosta- <macosta-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 15:23:48 by macosta-          #+#    #+#             */
-/*   Updated: 2026/02/11 16:03:17 by macosta-         ###   ########.fr       */
+/*   Updated: 2026/02/12 21:49:48 by macosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	main(int argc, char **argv)
 	int	j;
 
 	j = argc;
-	if (argc < 3)
+	if (argc < 2)
 		return (1);
 	while (j > 1)
 	{
