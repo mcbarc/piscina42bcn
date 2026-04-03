@@ -1,0 +1,15 @@
+# Compiled binaries
+a.out
+convereter
+*.o
+*.a
+*.so
+
+# IDE / System files
+.DS_Store
+*.swp
+*.swo
+.vscode/
+
+# Temporary files
+*.tmp

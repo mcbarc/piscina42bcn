@@ -35,7 +35,6 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		i;
 	int		count;
 	char	*temp;
-
 	
 	sep_len = ft_strlen(sep);
 	i = 0;

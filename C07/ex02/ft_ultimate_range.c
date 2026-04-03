@@ -6,7 +6,7 @@
 /*   By: macosta- <macosta-@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 19:16:20 by macosta-          #+#    #+#             */
-/*   Updated: 2026/02/12 20:51:00 by macosta-         ###   ########.fr       */
+/*   Updated: 2026/03/13 17:25:27 by macosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int ft_ultimate_range(int **range, int min, int max)
 		return (0);
 	}
 	size = max - min;
-	*range = NULL;
+	*range = NULL; //initializing to NULL.
 	*range = (int *)malloc(sizeof(int) * size); //CPU looks at the value of range 0x123 (the 
 						    //memory we crated in main). * tells CPU go to 
 						    //that address and change the value stored there.
